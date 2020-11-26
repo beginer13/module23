@@ -5,12 +5,9 @@ import MainPage from "./MainPage/MainPage.js";
 function App () 
     {
         return (
-            <div>
-                <MainPage />
-            </div>
+            <MainPage />
         )  
         
-    }
-
+    };
 
 export default App;

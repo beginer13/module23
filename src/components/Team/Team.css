@@ -1,0 +1,108 @@
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    height: 341px;
+    align-items: center;
+    background: #F7F9FB; }
+.contacts-header {
+    font-size: 48px;
+    margin: 0;
+    padding: 80px 0px 0 0; }
+    .contacts-container .container-mail-phone {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 600px;
+      padding: 43px 0 0 0; }
+      .contacts-container .container-mail-phone .text-mail-phone-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .contacts-container .container-mail-phone .text-mail-phone-info-container .text-mail-phone {
+          font-size: 14px;
+          color: gray;
+          padding: 5px 0; }
+        .contacts-container .container-mail-phone .text-mail-phone-info-container .text-mail-phone-data {
+          font-size: 20px; }
+      .contacts-container .container-mail-phone .midle-div {
+        width: 2px;
+        height: 62px;
+        margin: 0;
+        background: #C8C8CF; }
+  
+  /* -----------------team container----------------------------- */
+  .team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  
+  .photo-employees-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 55px 0 60px 0;
+    max-width: 1050px; }
+    .photo-employees-container .photo-employee {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 41px 0; }
+      .photo-employees-container .photo-employee .photo-employee-single {
+        width: 180px;
+        height: auto; }
+      .photo-employees-container .photo-employee .employee-name {
+        padding: 23px 0 0 0;
+        font-size: 20px;
+        font-weight: 500;
+        white-space: nowrap;
+        line-height: 29.46px; }
+      .photo-employees-container .photo-employee .employee-position {
+        font-size: 14px;
+        padding: 8px 0 60px 0;
+        white-space: nowrap;
+        color: #828282;
+        line-height: 20.62px; }
+  
+  @media (max-width: 670Px) {
+    /* ----------------------------- contacts section-- */
+    .contacts-container {
+      Height: 237px; }
+    .contacts-header {
+        font-size: 24px;
+        margin: 0;
+        padding: 40px 0 0 0; }
+      .contacts-container .container-mail-phone {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 0 0; }
+        .contacts-container .container-mail-phone .text-mail-phone-info-container {
+          padding: 0 0 20px 0; }
+          .contacts-container .container-mail-phone .text-mail-phone-info-container .text-mail-phone {
+            font-size: 12px;
+            padding: 0 0 5px 0; }
+          .contacts-container .container-mail-phone .text-mail-phone-info-container .text-mail-phone-data {
+            font-size: 16px; }
+        .contacts-container .container-mail-phone .midle-div {
+          display: none; }
+  
+    /* -----------------------team photo container------------------------- */
+    .photo-employees-container {
+      padding: 30px 0 30px 0; }
+      .photo-employees-container .photo-employee {
+        width: 80px;
+        margin: 0 43px 0; }
+        .photo-employees-container .photo-employee .photo-employee-single {
+          width: 80px; }
+        .photo-employees-container .photo-employee .employee-name {
+          padding: 15px 0 0 0;
+          font-size: 16px;
+          line-height: 23.57px; }
+        .photo-employees-container .photo-employee .employee-position {
+          font-size: 12px;
+          padding: 1px 0 30px 0;
+          line-height: 17.68px; } }
+  
