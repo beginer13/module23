@@ -4,7 +4,7 @@ import AnswerQwestion from "../AnswerQwestion/AnswerQwestion.js"
 
 class AnwsersQwestions extends React.Component {
     
-    render (){
+    render() {
         return (
             <div className="questions-container">
                 < AnswerQwestion answer={'No answer'} qwestion={'Могу ли я отменить бронь?'} />
