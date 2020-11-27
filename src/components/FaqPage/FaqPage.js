@@ -3,6 +3,7 @@ import './FaqPage.css';
 import Header from "../Header/Header.js";
 import Footer from "../Footer/Footer";
 import FaqHeader from "../FaqHeader/FaqHeader.js"
+import AnwsersQwestions from "../AnwsersQwestions/AnwsersQwestions.js"
 
 
 class FaqPage extends React.Component {
@@ -12,6 +13,7 @@ class FaqPage extends React.Component {
             <div className="FaqPage">
                 <Header />
                 <FaqHeader />
+                <AnwsersQwestions />
                 <Footer />
             </div>
         )

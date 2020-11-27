@@ -1,0 +1,117 @@
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-width: 1066px;
+    margin:  0 auto 120px auto;
+}
+
+.question-answer-container {
+    display: block;
+    text-align: left;
+    margin: 0 20px 15px 20px;  
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(247,247,248,1);
+    font-size: 20px;
+    color:rgb(17, 17, 17);
+    padding: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.question span {
+    margin-right: 20px;
+}
+
+.vector {
+    height: 10px;
+    width: auto;
+    margin: auto 0;
+}
+.opened-question-answer .vector {
+    transform: rotate(180deg);
+}
+.answer {
+    display: none;
+}
+
+.opened-question-answer .answer {
+    display: block;
+    font-size: 20px;
+    max-width: 784px;
+    color:rgba(27, 27, 27, 1);
+    padding: 0 20px;
+    margin: 20px 0;   
+}
+
+.opened-question-answer .question {
+    background-color: rgba(97, 161, 153, 0.15);;
+    color: rgba(97, 161, 153, 1);
+}
+
+.question:hover {
+     background-color: rgb(97,161,153,0.1);
+}
+
+@media  (max-width: 670Px) {
+    .questions-container {
+        margin:  0 auto 50px auto;
+    }
+    
+    .question-answer-container {
+        display: block;
+        /* text-align: justify; */
+        margin: 0 20px 15px 20px;  
+    }
+    
+    .question {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(247,247,248,1);
+        font-size: 14px;
+        color:rgb(17, 17, 17);
+        padding: 20px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    .question span {
+        margin-right: 20px;
+    }
+    
+    .vector {
+        height: 8px;
+        width: auto;
+        margin: auto 0;
+    }
+    .opened-question-answer .vector {
+        transform: rotate(180deg);
+    }
+    .answer {
+        display: none;
+    }
+    
+    .opened-question-answer .answer {
+        display: block;
+        font-size: 14px;
+        max-width: 784px;
+        color:rgba(27, 27, 27, 1);
+        padding: 0 20px;
+        margin: 20px 0;   
+    }
+    
+    .opened-question-answer .question {
+        background-color: rgba(97, 161, 153, 0.15);;
+        color: rgba(97, 161, 153, 1);
+    }
+    
+    .question:hover {
+         background-color: rgb(97,161,153,0.1);
+    }
+}
