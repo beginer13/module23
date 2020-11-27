@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import logo from './img/logo.svg';
 import burger from './img/burger.svg';
 import React from 'react'
@@ -29,10 +30,10 @@ class Header extends React.Component {
                     </a>
                 </div>
                 <nav className={navClassName}>
-                    <a href="#" className="menu-item" >О нас</a>
-                    <a href="#" className="menu-item">Условия</a>
-                    <a href="./faq.html" className="menu-item" >Частые вопросы</a>
-                    <a href="#" className="menu-item login">Войти</a>
+                    <a href="/" className="menu-item" >О нас</a>
+                    <a href="/" className="menu-item">Условия</a>
+                    <a href="/faqpage" className="menu-item" >Частые вопросы</a>
+                    <a href="/" className="menu-item login">Войти</a>
                 </nav>
                 <div className="nav-lines">
                     <img src={burger} className="hamburger" id="burger" onClick={this.showNav}/>
