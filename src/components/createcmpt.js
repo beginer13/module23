@@ -14,24 +14,18 @@ String.prototype.replaceAll = function(search, replace){
 fs.mkdir(convertName(argv.name), () => {console.log("directory has been created")});
      
 fs.readFile("./Templates/Template.js", "utf8", (error, data) => {
-    createJsFile(data, convertName(argv.name));
+    createFile(data, convertName(argv.name), "js");
     });
 
 fs.readFile("./Templates/Template.css", "utf8", (error, data) => {
-    createCssFile (data, convertName(argv.name));
+    createFile (data, convertName(argv.name), "css");
     });
 
-function createJsFile (txt, name) {
+function createFile (txt, name, type) {
     txt = txt.replaceAll("TEMPXXX", name);
     txt = txt.replaceAll("tempxxx", name.toLowerCase());
-    const filename = "./"+name+"/"+name+".js"
-    fs.writeFile(filename, txt, ()=>{console.log("js file has been created")});
-};
-
-function createCssFile (txt, name) {
-    txt = txt.replaceAll("tempxxx", name.toLowerCase());
-    const filename = "./"+name+"/"+name+".css"
-    fs.writeFile(filename, txt, ()=>{console.log("css file has been created")});
+    const filename = "./"+name+"/"+name+"."+type
+    fs.writeFile(filename, txt, ()=>{console.log(type+" template has been created")});
 };
 
 function convertName (name) {
