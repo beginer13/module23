@@ -33,7 +33,7 @@ class Header extends React.Component {
                     <a href="/" className="menu-item" >О нас</a>
                     <a href="/" className="menu-item">Условия</a>
                     <a href="/faqpage" className="menu-item" >Частые вопросы</a>
-                    <a href="/" className="menu-item login">Войти</a>
+                    <a href="/reg" className="menu-item login">Войти</a>
                 </nav>
                 <div className="nav-lines">
                     <img src={burger} className="hamburger" id="burger" onClick={this.showNav}/>

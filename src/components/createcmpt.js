@@ -8,34 +8,32 @@ const argv = yargs
     .demandOption(["name","type"], "Component name and at least one component type should be passed")
     .argv;
 
-String.prototype.replaceAll = function(search, replace){
+String.prototype.replaceAll = function(search, replace) {
     return this.split(search).join(replace);
-    };
+};
+
+console.log(argv.name);
 
 if (argv.type.indexOf("css") != -1 || argv.type.indexOf("js") != -1) {
-    fs.mkdir(convertName(argv.name), () => {console.log("directory has been created")})
+    fs.mkdir(argv.name, () => {console.log("directory has been created")})
 }
 
-if (argv.type.indexOf("js") != -1) {   
+if (argv.type.indexOf("js") != -1) {
     fs.readFile("./Templates/Template.js", "utf8", (error, data) => {
-        createFile(data, convertName(argv.name), "js");
-        });
+        createFile(data, argv.name, "js");
+    });
 }
 
-if (argv.type.indexOf("css") != -1) {fs.readFile("./Templates/Template.css", "utf8", (error, data) => {
-        createFile (data, convertName(argv.name), "css");
-        });
+if (argv.type.indexOf("css") != -1) { 
+    fs.readFile("./Templates/Template.css", "utf8", (error, data) => {
+        createFile(data, argv.name, "css");
+    });
 };
 
-function createFile (txt, name, type) {
-    txt = txt.replaceAll("TEMPXXX", name);
-    txt = txt.replaceAll("tempxxx", name.toLowerCase());
-    const filename = "./"+name+"/"+name+"."+type
-    fs.writeFile(filename, txt, ()=>{console.log(type+" template has been created")});
+function createFile(txt, name, type) {
+    let txt2 = txt;
+    txt2 = txt2.replaceAll("TEMPXXX", name);
+    txt2 = txt2.replaceAll("tempxxx", name.toLowerCase());
+    const filename = "./"+name+"/"+name+"."+type;
+    fs.writeFile(filename, txt2, ()=>{console.log(type+" template has been created")});
 };
-
-function convertName (name) {
-    name = name.toLowerCase();
-    name = name[0].toUpperCase()+name.slice(1);
-    return name;
-}
