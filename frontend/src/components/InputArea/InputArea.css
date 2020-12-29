@@ -47,27 +47,62 @@
 .input-fild {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     max-width: 1000px;
     min-width: 700px;
     font-size: 14px;
     margin: 0 0 20px 0;
 }
+.fild-name {
+    display: block;
+    width: 263px;
+}
+
 .input-text {
     width: 416px;
-    border: 2px solid rgba(224, 224, 224, 1);
+    border: 1px solid rgba(224, 224, 224, 1);
     border-radius: 6px;
     height: 44px;
-    font-size: 16px;
+    width: 416px;
+    font-size: 14px;
+    padding: 0 12px 0 12px;
+    cursor: default;
+}
+
+.input-text:hover {
+    border: 1px solid rgba(97, 161, 153, 1);
+
+}
+.input-text:focus {
+    border: 2px solid rgba(97, 161, 153, 1);
+    outline: 0;
+    outline-offset: 0;
+}
+
+.input-digit:hover {
+    border: 1px solid rgba(97, 161, 153, 1);
+}
+
+.input-digit:focus {
+    border: 2px solid rgba(97, 161, 153, 1);
+    outline: 0;
+    outline-offset: 0;
+}
+
+::placeholder {
+    color:rgba(189, 189, 189, 1);
 }
 
 .input-digit {
     width: 155x;
-    border: 2px solid rgba(224, 224, 224, 1);
+    border: 1px solid rgba(224, 224, 224, 1);
     border-radius: 6px;
     height: 44px;
-    font-size: 16px;
+    width: 155px;
+    font-size: 14px;
+    padding: 0 12px 0 12px;
+    cursor: default;
 }
 
 .continue {
@@ -88,4 +123,5 @@
     width: 176px;
     height: 51px;
     font-size: 16px;
+    cursor: pointer;
 }
