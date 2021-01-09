@@ -1,6 +1,6 @@
 import React from "react";
 import './FaqPage.css';
-import Header from "../Header/Header.js";
+import Header from "../../containers/Header";
 import Footer from "../Footer/Footer";
 import FaqHeader from "../FaqHeader/FaqHeader.js"
 import AnwsersQwestions from "../AnwsersQwestions/AnwsersQwestions.js"

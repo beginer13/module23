@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../Header/Header.js";
+import Header from "../../containers/Header";
 import ContactPictureText from "../ContactPictureText/ContactPictureText.js";
 import ContactInfo from "../ContactInfo/ContactInfo.js";
 import Team from "../Team/Team.js";

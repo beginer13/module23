@@ -1,0 +1,98 @@
+.authentication-page {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(27, 27, 27, 0.5);
+}
+
+.authentication-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 504px;
+    height: 668px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 0 solid rgba(224, 224, 224, 1);
+}
+
+.cross-conteiner {  
+    position: absolute;
+    top:25px;
+    right: 25px;
+    background-image: url("./img/cross.svg");
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.authentication-header {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 38px 0 38px 0;
+}
+.authentication-img {
+    width: 302px;
+    height: 181px;
+    margin: 61px 0 0 0;
+}
+
+
+.input-email-password {
+    width: 416px;
+    border: 1px solid rgba(224, 224, 224, 1);
+    border-radius: 6px;
+    height: 44px;
+    width: 350px;
+    font-size: 14px;
+    padding: 0 12px 0 12px;
+    margin: 0 0 20px 0;
+    cursor: default;
+}
+
+.input-email-password:hover {
+    border: 1px solid rgba(97, 161, 153, 1);
+
+}
+.input-email-password:focus {
+    border: 2px solid rgba(97, 161, 153, 1);
+    outline: 0;
+    outline-offset: 0;
+}
+::placeholder {
+    color:rgba(189, 189, 189, 1);
+}
+
+.authentication-submit {
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(230, 230, 230, 1);
+    color: rgba(180, 181, 189, 1);
+    margin: 10px 0 0 0;
+    width: 126px;
+    height: 51px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.bottom-line {
+    margin: 40px 0 0 0;
+    width: 350px;
+    height: 1px;
+    background-color:rgba(222, 219, 241, 1);
+}
+
+.lets-reg {
+    color: rgba(80, 142, 135, 1);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 30px 0 0 0;
+    cursor: pointer;
+}
+

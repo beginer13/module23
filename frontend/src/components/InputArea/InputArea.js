@@ -9,6 +9,7 @@ class InputArea extends React.Component {
         this.onBirhtdayChange = this.onBirhtdayChange.bind(this);
         this.onPhoneChange = this.onPhoneChange.bind(this);
         this.onEmailChange = this.onEmailChange.bind(this);
+        this.onPasswordChange = this.onPasswordChange.bind(this);
         this.onPassNomChange = this.onPassNomChange.bind(this);
         this.onPassDateChange = this.onPassDateChange.bind(this);
         this.onPassOfficeChange = this.onPassOfficeChange.bind(this);
@@ -40,6 +41,10 @@ class InputArea extends React.Component {
                 <div className='input-fild'>
                     <span className='fild-name'>Электронная почта</span>
                     <input placeholder='mail@example.com' className='input-text' onChange={this.onEmailChange} />
+                </div>
+                <div className='input-fild'>
+                    <span className='fild-name'>Пароль</span>
+                    <input type="password" placeholder='пароль' className='input-text' onChange={this.onPasswordChange} />
                 </div>
                 <div className='input-fild'>
                     <span className='fild-name'>Телефон</span>
@@ -106,19 +111,28 @@ class InputArea extends React.Component {
     onEmailChange (e) {
         this.setState({email: e.target.value});
     };
+    onPasswordChange (e) {
+        this.setState({password: e.target.value});
+    };
     onPhoneChange (e) {
         this.setState({phone: e.target.value});
     };
 
     nextForm(e) {
         e.preventDefault();
-        fetch('http://localhost:8000', {
+        fetch('http://localhost:8000/registration/', {
             method: 'POST',
             body: JSON.stringify(this.state),
             headers: {'Content-Type': 'application/json'},
         })
-        .then(res => res.text())
-        .then(res => alert(res))
+        .then(responce => responce.json())
+        .then(body => {
+            if (body.success) {
+                localStorage.setItem('accessToken', body.accessToken);
+                localStorage.setItem('refreshToken', body.refreshToken);   
+            };
+            alert(body.text);
+        })
     };
 }
 
